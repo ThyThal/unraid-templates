@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SeaDexArr</Name>
+  <Repository>ghcr.io/bbtufty/seadexarr:latest</Repository>
+  <Registry>https://github.com/bbtufty/seadexarr/pkgs/container/seadexarr</Registry>
+  <Network>bridge</Network>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/bbtufty/seadexarr/issues</Support>
+  <Project>https://github.com/bbtufty/seadexarr</Project>
+  <Overview>Sync Anime on Sonarr and Radarr with SeaDex. Automatically finds and grabs the best anime releases tagged on SeaDex.</Overview>
+  <Category>MediaApp:Video</Category>
+  <Icon>https://raw.githubusercontent.com/bbtufty/seadexarr/main/example_post.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/unraid-templates/main/seadexarr.xml</TemplateURL>
+  <Maintainer>
+    <WebPage>https://github.com/YOUR_GITHUB_USERNAME</WebPage>
+  </Maintainer>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/seadexarr" Mode="rw" Description="Path to store config and cache files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/seadexarr</Config>
+  <Config Name="Schedule Time" Target="SCHEDULE_TIME" Default="6" Description="How often to run, in hours." Type="Variable" Display="always" Required="false" Mask="false">6</Config>
+</Container>
